@@ -2,8 +2,9 @@
 
 document.addEventListener("DOMContentLoaded", init);
 
+
 function init() {
-    let x = 51.208115;
+    let x = 51.208515;
     let y = 3.224755;
 
     let map = initMap(x,y);
@@ -26,21 +27,21 @@ function initMap(x,y){
     });
 
     let map = new ol.Map({
-        controls: ol.control.defaults({attribution: false}).extend([attribution]),
+        controls: ol.control.defaults({attribution: false}).extend([attribution]),  
         layers: [
             new ol.layer.Tile({
                 source: new ol.source.OSM({
                     url: 'https://tile.openstreetmap.be/osmbe/{z}/{x}/{y}.png',
                     attributions: [ ol.source.OSM.ATTRIBUTION, 'Tiles courtesy of <a href="https://geo6.be/">GEO-6</a>' ],
-                    maxZoom: 18
+                    maxZoom: 50
                 })
             })
         ],
         target: 'map',
         view: new ol.View({
             center: ol.proj.fromLonLat([y, x]),
-            maxZoom: 18,
-            zoom: 12
+            maxZoom: 29,
+            zoom: 18
         })
     });
     return map;
@@ -52,7 +53,6 @@ function makeLayer(x,y) {
         source: new ol.source.Vector({
             features: [
                 new ol.Feature({
-                    id:"test",
                     geometry: new ol.geom.Point(ol.proj.fromLonLat([y, x]))
                 })
             ]
@@ -116,6 +116,7 @@ function makePopUp(response,coordinate,content) {
         if (response.naam.includes("Belfort")){
             console.log("includes");
             content.innerHTML = `<b>${response.naam}</b><br/><button value='${response.id}'>view more</button>`;
+            
             document.querySelector("#popup button").addEventListener("click",function (e){
                 seeDetails(e,response)
             });
