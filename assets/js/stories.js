@@ -7,6 +7,7 @@ function init() {
 		interval: 1000000 * 10
 	});
 
+  document.querySelector('#btn').addEventListener('click', e => { window.location.href = "./map.html"})
 
    console.log(data)
    addTopIndicators()

@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", init);
 
 
 function init() {
+    document.querySelector('#btn').addEventListener('click', e => { window.location.href = "./index.html"})
     let x = 51.208515;
     let y = 3.224755;
 
