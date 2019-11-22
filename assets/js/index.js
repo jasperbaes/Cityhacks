@@ -4,8 +4,6 @@ document.addEventListener("DOMContentLoaded", init);
 
 function init() {
 
-
-    setEventListeners();
     let elem = document.querySelector("#interest");
     populateInterests(elem);
     getInitialData();
@@ -24,18 +22,24 @@ function populateInterests(element) {
 
     let interests = ["not interested","musea","gebouwen","eten","alcohol","drugs"]
     interests.forEach(function (interest) {
-        let option = createElement("option");
-        setAttribute(option,"value",interest);
-        makeTextNode(option,interest);
-        element.appendChild(option);
-    })
+        let button = createElement("button");
+        setAttribute(button,"type","button");
+        setAttribute(button,"value",interest);
+        makeTextNode(button,interest);
+        element.appendChild(button);
+    });
+    setEventListeners();
 }
-function processForm(e) {
-    e.preventDefault();
-    window.location.href = "overview.html";
 
+function goToNextPage(e) {
+    localStorage.setItem("interest",this.value);
+    window.location.href = "overview.html";
 }
 
 function setEventListeners() {
-    document.querySelector("form").addEventListener("submit",processForm);
+  let buttons = document.querySelectorAll("button");
+
+  buttons.forEach(function (button) {
+      button.addEventListener("click",goToNextPage)
+  })
 }
