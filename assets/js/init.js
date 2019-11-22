@@ -15,7 +15,7 @@ function getErfgoedAround(x,y){
 
 
 async function getErfgoedById(uri) {
-  let data = await fetch(uri, {
+  const data = await fetch(uri, {
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json'
@@ -25,5 +25,6 @@ async function getErfgoedById(uri) {
   })
       .then(response => response.json())
       .then(e => {return e});
+
   return data
 }
