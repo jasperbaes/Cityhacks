@@ -19,7 +19,7 @@ function setEventListeners() {
 }
 
 function getDataFromStorage() {
-    return JSON.parse(localStorage.getItem("data"));;
+    return JSON.parse(localStorage.getItem("data"));
 }
 
 function displayData() {
