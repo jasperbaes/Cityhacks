@@ -10,8 +10,12 @@ main{
 span{
     display: block;
 }
+h1{
+    font-family: index_title;
+
+}
 p{
-    font-size: 18px;
+    font-size: 15px;
     border-left: 1px solid grey;
     padding-left: 5vw;
 }
@@ -22,12 +26,13 @@ button{
     margin-bottom: 5vw;
         width: 48%;
     height: 8vh;
+    background-color: #F1F2ED;
         border: 1px solid black;
         color: black;
 }
 button:hover{
     background-color: black;
-    color: white;
+    color: #F1F2ED;
 }
 
 .center-screen {

@@ -11,7 +11,8 @@ html{
     user-select: none;
 }
 body {
-    background-color: #E8E8E3;
+
+    background-color: #F1F2ED;
 }
 
 @media (min-width: 768px) {
@@ -30,7 +31,11 @@ body {
 }
 @font-face {
     font-family: "buttons";
-    src: url("../fonts/fonts/Value/value-serif.woff2") format('woff2');
+    src: url("../fonts/fonts/Value/value-serif.woff") format('woff');
+}
+@font-face {
+    font-family: "index_title";
+    src: url("../fonts/fonts/Objective/Objective-Bold.woff2") format('woff2');
 }
 h1, h3, h5{
     font-weight: bold;
@@ -38,7 +43,7 @@ h1, h3, h5{
 h1 {
     font-family: date;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    color: #E8E8E3;
+    color: #F1F2ED;
 }
 h3 {
     font-family: title;
