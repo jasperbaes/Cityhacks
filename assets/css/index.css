@@ -1,0 +1,39 @@
+#interest{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+main{
+   width: 80%;
+    margin: 0 auto;
+}
+span{
+    display: block;
+}
+p{
+    font-size: 18px;
+    border-left: 1px solid grey;
+    padding-left: 5vw;
+}
+button{
+    font-family: buttons;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-bottom: 5vw;
+        width: 48%;
+    height: 8vh;
+        border: 1px solid black;
+        color: black;
+}
+button:hover{
+    background-color: black;
+    color: white;
+}
+
+.center-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
