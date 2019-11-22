@@ -11,8 +11,8 @@ function init() {
 function addTopIndicators() {
     let html = ''
     data.forEach((e, index) => {
-        html += (index == 0) ? `<li data-target="#myCarousel" data-slide-to="${index}" class="active"></li>`
-        : `<li data-target="#myCarousel" data-slide-to="${index}" class=""></li>`
+        html += (index == 0) ? `<li data-target="#myCarousel" data-slide-to="${index}" class="active" style="background-color: gray;"></li>`
+        : `<li data-target="#myCarousel" data-slide-to="${index}" class="" style="background-color: gray;"></li>`
     })
     document.querySelector('.carousel-indicators').innerHTML = html
 }
@@ -24,11 +24,11 @@ function addImages() {
         else html += `<div class="carousel-item">`
         html += 
         `
-            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"></rect></svg>
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#F1F1EC"></rect></svg>
             <div class="container">
                 <div class="carousel-caption text-left" style="top:100px;">
                     <h1>${e.date}</h1>
-                    <p>${e.title}</p>
+                    <h3>${e.title}</h3>
                 </div>
             </div>
       </div>`
