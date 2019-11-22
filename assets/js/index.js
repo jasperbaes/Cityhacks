@@ -33,7 +33,7 @@ function populateInterests(element) {
 
 function goToNextPage(e) {
     localStorage.setItem("interest",this.value);
-    window.location.href = "overview.html";
+    window.location.href = "map.html";
 }
 
 function setEventListeners() {

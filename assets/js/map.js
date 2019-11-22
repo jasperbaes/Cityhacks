@@ -7,8 +7,8 @@ function init() {
     let y = 3.224755;
 
     let map = initMap(x,y);
-
-    let cords = [[51.208115,3.224755]];
+    let belfort = [51.2079682626,3.2250209989];
+    let cords = [belfort];
     cords.forEach(function (cord) {
         let layer = makeLayer(cord[0],cord[1]);
         map.addLayer(layer);
@@ -52,6 +52,7 @@ function makeLayer(x,y) {
         source: new ol.source.Vector({
             features: [
                 new ol.Feature({
+                    id:"test",
                     geometry: new ol.geom.Point(ol.proj.fromLonLat([y, x]))
                 })
             ]
@@ -89,8 +90,8 @@ function addFunction(overlay, map){
     map.on('singleclick', function (event) {
         if (map.hasFeatureAtPixel(event.pixel) === true) {
             let coordinate = event.coordinate;
-            console.log(coordinate);
-            //content.innerHTML = '<b>Hello world!</b><br />I am a popup.';
+            console.log(event);
+           // content.innerHTML = `<b>Belfort en halle</b><br /><button value=''>view more</button>`;
             getBuildingByCord(coordinate,content);
             overlay.setPosition(coordinate);
         } else {
@@ -100,15 +101,25 @@ function addFunction(overlay, map){
     });
 }
 
+function seeDetails(e,response) {
+    e.preventDefault();
+    localStorage.setItem("text",response.teksten[0].tekst);
+    window.location.href = "stories.html";
+}
+
 function makePopUp(response,coordinate,content) {
     console.log(response);
     let coordinates = response.locatie.contour.coordinates;
 
     console.log(coordinates.includes(coordinate));
     coordinates.forEach(function (cord) {
-        if (cord.includes(coordinate)){
+        if (response.naam.includes("Belfort")){
             console.log("includes");
             content.innerHTML = `<b>${response.naam}</b><br/><button value='${response.id}'>view more</button>`;
+            document.querySelector("#popup button").addEventListener("click",function (e){
+                seeDetails(e,response)
+            });
+
         }
     });
 
@@ -128,10 +139,3 @@ function getBuildingByCord(coordinate,content) {
 function getDataFromStorage() {
     return JSON.parse(localStorage.getItem("data"));
 }
-
-function displayData() {
-
-
-}
-
-
