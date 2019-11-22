@@ -19,16 +19,16 @@ function init() {
 }
 
 function addTopIndicators() {
-    let html = ''
+    let html = '';
     data.forEach((e, index) => {
         html += (index == 0) ? `<li data-target="#myCarousel" data-slide-to="${index}" class="active" style="background-color: gray;"></li>`
         : `<li data-target="#myCarousel" data-slide-to="${index}" class="" style="background-color: gray;"></li>`
-    })
+    });
     document.querySelector('.carousel-indicators').innerHTML = html
 }
 
 function addImages() {
-    let html = ''
+    let html = '';
     data.forEach((e, index) => {
         if (index==0) html += `<div class="carousel-item active">`
         else html += `<div class="carousel-item">`
