@@ -10,9 +10,6 @@ function init() {
 }
 
 function getInitialData() {
-    let id = 29458;
-    getErfgoedById(id);
-
     let x = 51.208115;
     let y = 3.224755;
     getErfgoedAround(x,y);
@@ -20,7 +17,7 @@ function getInitialData() {
 
 function populateInterests(element) {
 
-    let interests = ["not interested","musea","gebouwen","eten","alcohol","drugs"]
+    let interests = ["history","love","architecture","family","fun","action"]
     interests.forEach(function (interest) {
         let button = createElement("button");
         setAttribute(button,"type","button");
