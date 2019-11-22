@@ -19,21 +19,7 @@ p{
     border-left: 1px solid grey;
     padding-left: 5vw;
 }
-button{
-    font-family: buttons;
-    font-weight: bold;
-    text-transform: capitalize;
-    margin-bottom: 5vw;
-        width: 48%;
-    height: 8vh;
-    background-color: #F1F2ED;
-        border: 1px solid black;
-        color: black;
-}
-button:hover{
-    background-color: black;
-    color: #F1F2ED;
-}
+
 
 .center-screen {
     display: flex;

@@ -1,0 +1,15 @@
+#popup{
+    background-color: #F1F2ED;
+    border: 1px solid black;
+   padding-top: 2vh;
+   padding-bottom: 2vh;
+   padding-left: 2vw;
+   padding-right: 2vw;
+    border-radius: 5%;
+
+}
+button{
+    width: 100%;
+    margin-bottom: 0;
+    margin-top: 1vh;
+}
