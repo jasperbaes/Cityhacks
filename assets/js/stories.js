@@ -7,9 +7,10 @@ function init() {
    addTopIndicators()
    addImages()
    listenActive()
+
    window.setInterval(function(){
     listenActive()
-  }, 100);
+  }, 1000);
 }
 
 function addTopIndicators() {
@@ -50,27 +51,8 @@ function listenActive() {
 
 function changeDesc(index) {
     document.querySelector('.card-title').innerHTML = data[index].title
+    document.querySelector('.card-text').innerHTML = localStorage.getItem('text').split('Bouwgeschieden')[1].split('<p>')[index+1].replace('</p>', '').replace('↵', '')
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 let data = [
     {
