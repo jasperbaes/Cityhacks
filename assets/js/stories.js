@@ -6,6 +6,10 @@ function init() {
    console.log(data)
    addTopIndicators()
    addImages()
+   listenActive()
+   window.setInterval(function(){
+    listenActive()
+  }, 100);
 }
 
 function addTopIndicators() {
@@ -34,6 +38,18 @@ function addImages() {
       </div>`
     })
     document.querySelector('.carousel-inner').innerHTML = html
+}
+
+function listenActive() {
+    document.querySelectorAll('.carousel-item').forEach((e, index) => {
+        if (e.classList.contains('active')) {
+            changeDesc(index)
+        }
+    })
+}
+
+function changeDesc(index) {
+    document.querySelector('.card-title').innerHTML = data[index].title
 }
 
 
