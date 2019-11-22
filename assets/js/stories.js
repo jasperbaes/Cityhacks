@@ -3,6 +3,11 @@
 document.addEventListener("DOMContentLoaded", init);
 
 function init() {
+    $('#myCarousel').carousel({
+		interval: 1000000 * 10
+	});
+
+
    console.log(data)
    addTopIndicators()
    addImages()
@@ -30,6 +35,7 @@ function addImages() {
         html += 
         `
             <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#F1F1EC"></rect></svg>
+                <img src="../images/${index}.png">
             <div class="container">
                 <div class="carousel-caption text-left" style="top:50px;">
                     <h1>${e.date}</h1>
