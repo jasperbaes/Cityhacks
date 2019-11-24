@@ -11,17 +11,14 @@ Currently we get all of the data with multiple endpoints from [onroerenderfgoed.
 
 ## Preview
 
-<video width="320" height="240" controls>
-  <source src="/website/assets/images/Cityhacks.mp4" type="video/mp4">
-</video>
-
-<img src="./website/assets/images/image.png" alt="drawing" width="200" style="display: block; margin-left: auto; margin-right: auto; margin-top:50px"/>
-<img src="./website/assets/images/Startscherm.png" alt="drawing" width="200" style="display: block; margin-left: auto; margin-right: auto; margin-top:30px"/>
-<img src="./website/assets/images/Detail.png" alt="drawing" width="200" style="display: block; margin-left: auto; margin-right: auto; margin-top:30px"/>
+<img src="./website/assets/images/Cityhacks.gif" alt="drawing" width="500" style="display: block; margin-top:50px"/>
+<img src="./website/assets/images/Startscherm.png" alt="drawing" width="200" style="margin-top:30px; margin-right: 50px"/>
+<img src="./website/assets/images/image.png" alt="drawing" width="200" style=" margin-top:30px; margin-right: 50px"/>
+<img src="./website/assets/images/Detail.png" alt="drawing" width="200" style="margin-top:30px; margin-right: 50px"/>
 
 ## Collaborators
 
-- Jasper Baes
-- Léon van Derhaeghen
-- Rafael De Smet
+- Jasper Baes (jasper.baes@student.howest.be)
+- Léon van Derhaeghen (leon.van.derhaeghen@student.howest.be)
+- Rafael De Smet (rafael.de.smet@student.howest.be)
 - Marie Devos (coach)
