@@ -7,7 +7,7 @@ We developed a prototype of a mobile application where the user can see all the 
 In this way, we can ensure that tourists get a lot of information about Bruges' cultural heritage in a very accessible and fast way, but also that the most popular locations among tourists are mapped out.
 
 ## Open Data Sources
- Currently we get all of the data with multiple endpoints from [onroerenderfgoed.be](https://www.onroerenderfgoed.be/)
+Currently we get all of the data with multiple endpoints from [onroerenderfgoed.be](https://www.onroerenderfgoed.be/)
 
 ## Preview
 
